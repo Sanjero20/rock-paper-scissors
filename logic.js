@@ -3,7 +3,7 @@ function playRound(playerSelection, computerSelection) {
   let winner;
 
   // Same Pick
-  if (playerSelection == computerPlay) {
+  if (playerSelection == computerSelection) {
     winner = "No One";
   }
 
