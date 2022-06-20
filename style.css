@@ -32,6 +32,7 @@ img {
   max-width: 50px;
   padding: 20px;
 }
+
 footer,
 header {
   width: 100%;
@@ -39,7 +40,6 @@ header {
   background: #1c2129;
   text-align: center;
   font-size: 50px;
-  
 }
 
 footer {
@@ -52,9 +52,10 @@ footer {
   justify-content: center;
 }
 
-#rounds {
+#head {
   padding-top: 20px;
-  font-size: 40px;
+  font-size: 60px;
+  text-align: center;
 }
 
 .container {
@@ -107,7 +108,10 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 40px;
+  }
 
+  #head {
+    font-size: 50px;
   }
 
   .container{
