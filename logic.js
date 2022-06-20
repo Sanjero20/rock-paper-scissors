@@ -15,7 +15,7 @@ const compDisplay = document.querySelector("#comp-display");
 const userScoreDisplay = document.querySelector("div#you.score");
 const compScoreDisplay = document.querySelector("div#bot.score");
 
-const div = document.createElement('div');
+const div = document.querySelector('#round-winner');
 const buttons = document.querySelectorAll("button");
 
 // Add event listener to all buttons
@@ -88,9 +88,7 @@ function displayChoices(user, computer) {
 }
 
 function displayWinner() {
-  div.setAttribute('style', 'font-size: 30px; text-align: center; padding-top: 20px');
   div.innerHTML = `Round winner: ${winner}`;
-  body.appendChild(div);
 }
 
 function trackScore(winner) {
