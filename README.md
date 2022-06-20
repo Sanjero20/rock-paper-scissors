@@ -1,4 +1,4 @@
 # odin-rock-paper-scissors
 A Rock Paper Scissors Game created using JavaScript
 
-This is only playable thruough the console
+Play at: https://sanjero20.github.io/odin-rock-paper-scissors/
