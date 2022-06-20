@@ -94,8 +94,8 @@ function displayChoices(user, computer) {
 }
 
 function displayWinner() {
-  div.setAttribute('style', 'font-size: 20px; text-align: center');
-  div.innerHTML = `${winner}`;
+  div.setAttribute('style', 'font-size: 30px; text-align: center; padding-top: 20px');
+  div.innerHTML = `Round winner: ${winner}`;
   body.appendChild(div);
 }
 
