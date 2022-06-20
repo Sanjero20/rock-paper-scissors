@@ -1,7 +1,6 @@
 // A Game or Rock, Paper, and Scissors
 
 // Driver Code
-let roundNumber = 1;
 let user = "";
 let computer = "";
 let winner = "";
@@ -9,8 +8,6 @@ let userScore = 0;
 let compScore = 0;
 
 const body = document.querySelector('body');
-
-const round =document.querySelector('section#rounds')
 
 const userDisplay = document.querySelector("#user-display");
 const compDisplay = document.querySelector("#comp-display");
@@ -27,9 +24,6 @@ buttons.forEach(button => {
     user = button.id;
     computer = computerPlay()
     winner = playRound(user, computer)
-
-    roundNumber += 1;
-    round.textContent = `ROUND ${roundNumber}`;
 
     displayChoices(user, computer);
     displayWinner();
@@ -130,9 +124,6 @@ function promptWinner() {
 }
 
 function reset() {
-  roundNumber = 1;
-  round.textContent = "ROUND 1";
-
   userScore = 0;
   userScoreDisplay.textContent = 0;
   userDisplay.textContent = "";
