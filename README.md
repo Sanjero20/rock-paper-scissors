@@ -1,6 +1,6 @@
 # Rock Paper Scissors
 
-####Created with: 
+#### Created with: 
 - HTML
 - CSS
 - JavaScript
