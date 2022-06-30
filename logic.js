@@ -18,6 +18,9 @@ const compScoreDisplay = document.querySelector("div#bot.score");
 const div = document.querySelector('#round-winner');
 const buttons = document.querySelectorAll("button");
 
+let imgPlayer = document.createElement('img');
+let imgComputer = document.createElement('img');
+
 // Add event listener to all buttons
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -82,9 +85,29 @@ function computerPlay() {
   return choices[pick]
 }
 
-function displayChoices(user, computer) {
-  userDisplay.textContent = user;
-  compDisplay.textContent = computer;
+function displayChoices(user, comp) {
+  imgPlayer.src = convertToImage(user);
+  userDisplay.appendChild(imgPlayer)
+
+  imgComputer.src = convertToImage(comp);
+  compDisplay.appendChild(imgComputer)
+}
+
+function convertToImage(answer) {
+  console.log(answer);
+  let imgSource;
+  switch(answer){
+    case "rock":
+      imgSource = "images/rock.png";
+      break;
+    case "paper":
+      imgSource = "images/paper.png";
+      break;
+    case "scissors":
+      imgSource = "images/scissors.png";
+      break;
+  }
+  return imgSource;
 }
 
 function displayWinner() {
@@ -92,17 +115,20 @@ function displayWinner() {
 }
 
 function trackScore(winner) {
+  const greenColor = "#0F0"
+  const redColor = "#F00"
+  
   if (winner == "Player") {
     userScore += 1;
     userScoreDisplay.textContent = userScore;
-    userDisplay.setAttribute("style", "background-color: green");
-    compDisplay.setAttribute("style", "background-color: red");
+    userDisplay.setAttribute("style", `background-color: ${greenColor}`);
+    compDisplay.setAttribute("style", `background-color: ${redColor}`);
   }
   else if (winner == "Computer") {
     compScore += 1;
     compScoreDisplay.textContent = compScore;
-    userDisplay.setAttribute("style", "background-color: red");
-    compDisplay.setAttribute("style", "background-color: green");
+    userDisplay.setAttribute("style", `background-color: ${redColor}`);
+    compDisplay.setAttribute("style", `background-color: ${greenColor}`);
   }
   else {
     userDisplay.setAttribute("style", "background-color: grey");

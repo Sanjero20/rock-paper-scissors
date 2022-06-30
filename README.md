@@ -1,4 +1,8 @@
-# RPS project for "The Odin Project"
-A Rock Paper Scissors Game created using JavaScript
+# Rock Paper Scissors
 
-Play at: https://sanjero20.github.io/rock-paper-scissors/
+####Created with: 
+- HTML
+- CSS
+- JavaScript
+
+Live preview: [click here :point_left:](https://sanjero20.github.io/rock-paper-scissors/)

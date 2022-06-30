@@ -59,7 +59,7 @@ footer {
 }
 
 .container {
-  width: 400px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,8 +78,8 @@ footer {
 }
 
 .pick {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   margin: 20px 0;
   border: 2px solid white;
   gap: 30px;
@@ -90,6 +90,15 @@ footer {
   transition: all 0.1s;
 }
 
+.pick img {
+  max-width: 75px;
+  padding: 20px;
+}
+
+#comp-display {
+  transform: scaleX(-1);
+}
+
 #round-winner {
   font-size: 30px;
   text-align: center;
@@ -97,9 +106,10 @@ footer {
   height: 30px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   body {
-    display: flex;
+    width: 100vw;
+    height: 100vh;
   }
 
   header {
@@ -114,13 +124,19 @@ footer {
     font-size: 50px;
   }
 
-  .container{
-    gap: 20px;
-  }
-
   button {
     width: 100px;
     height: 100px;
+  }
+
+  .pick {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .pick img {
+    max-width: 60px;
   }
 }
 
